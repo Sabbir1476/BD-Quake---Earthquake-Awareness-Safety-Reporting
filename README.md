@@ -6,8 +6,7 @@ A web-based earthquake safety and community response platform built for Banglade
 
 ## 🚀 Live Demo
 
-🔗 [https://bdquake.rf.gd/public](https://bdquake.rf.gd/public)
-
+🔗  http://sabbir68.gt.tc/public
 ---
 
 ## ✨ Features
