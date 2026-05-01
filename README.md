@@ -124,8 +124,7 @@ htdocs/
 ---
 
 ## 📸 Screenshots
-
-
+<img width="1362" height="604" alt="image" src="https://github.com/user-attachments/assets/26474e3f-5e23-4a05-ab22-ca91c9898a88" />
 
 ---
 
