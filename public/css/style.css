@@ -1,0 +1,179 @@
+/* Shelter map */
+#shelter-map {
+    width: 100%;
+    height: 350px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    overflow: hidden;
+}
+
+
+
+
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    min-height: 100vh;
+
+    /* Dark blue gradient + background image */
+    background:
+        linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.95)),
+        url("../images/bg.jpg") center center fixed no-repeat;
+    background-size: cover;
+
+    color: #e5e7eb;
+}
+
+.main-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar-custom {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.navbar-brand {
+    letter-spacing: 0.03em;
+    font-weight: 700;
+}
+
+.nav-link {
+    font-size: 0.95rem;
+    color: #e5e7eb !important;
+    opacity: 0.85;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    opacity: 1;
+    color: #f97316 !important; /* warm orange highlight */
+}
+
+/* Hero section */
+.hero {
+    padding: 90px 0 50px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #f9fafb;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    margin-top: 12px;
+    color: #cbd5f5;
+}
+
+/* Cards */
+.card-custom {
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    border-radius: 16px;
+    padding: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+    transition: transform 0.18s ease, box-shadow 0.18s ease,
+                border-color 0.18s ease, background 0.18s ease;
+}
+
+.card-custom h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    color: #f9fafb;
+}
+
+.card-custom p {
+    font-size: 0.95rem;
+    color: #d1d5db;
+}
+
+.card-custom:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
+    border-color: #f97316;
+    background: rgba(15, 23, 42, 0.98);
+}
+
+/* Footer */
+.footer {
+    margin-top: auto;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    background: rgba(15, 23, 42, 0.97);
+    border-top: 1px solid rgba(148, 163, 184, 0.4);
+    color: #e5e7eb;
+}
+
+/* ------------------------------ */
+/* ✅ FIX: Only the 6 cards clickable (stretched-link locked inside card) */
+/* ------------------------------ */
+.feature-card{
+    position: relative;
+    overflow: hidden; /* IMPORTANT: prevents overlay from covering whole page */
+}
+
+.feature-card .stretched-link{
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: 1;
+}
+
+/* keep text above overlay */
+.feature-card h3,
+.feature-card p{
+    position: relative;
+    z-index: 2;
+}
+
+/* Optional focus ring for keyboard users */
+.feature-card .stretched-link:focus-visible{
+    outline: 2px solid rgba(249, 115, 22, 0.8);
+    outline-offset: 4px;
+    border-radius: 16px;
+}
+
+/* ------------------------------ */
+/* (Old rules for a.card-custom are not needed now, but keeping them won't harm) */
+/* Make home cards act like buttons (when card-custom is an <a>) */
+/* ------------------------------ */
+a.card-custom {
+    display: block;          /* make the whole card clickable */
+    height: 100%;            /* fill column height */
+    cursor: pointer;
+    text-decoration: none !important; /* remove underline */
+    color: inherit !important;        /* keep same text colors */
+}
+
+a.card-custom:visited,
+a.card-custom:hover,
+a.card-custom:active,
+a.card-custom:focus {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+a.card-custom * {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+a.card-custom:focus-visible {
+    outline: 2px solid rgba(249, 115, 22, 0.8);
+    outline-offset: 4px;
+}
